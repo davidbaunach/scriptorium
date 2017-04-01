@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>UC Scriptorium</title>
+
+  <script src="https://code.jquery.com/jquery-3.2.0.js"></script>
+
+  <script type="text/javascript">
+            $(document).ready(function(){
+                 $("#contents_primary").click(function(){
+                     $("#body").load("contents_primary.html");
+                 });
+            });
+        </script>
+
+</head>
+<body>
+  <h1>UC Scriptorium</h1>
+  
+  <div id="header">
+            <a href="#" id="contents_primary">Primary</a>
+            <!-- this stays the same -->
+        </div>
+        <div id="body">
+
+            <!-- All content will be loaded here dynamically -->
+
+        </div>
+         <div id="footer">
+            <!-- this stays the same -->
+            <iframe src=".\contents_primary.htm" frameborder="0" scrolling="yes" height="900" width="50%" align="left"> </iframe>  
+            <iframe src=".\contents_primary.htm" frameborder="0" scrolling="yes"  height="900" width="50%" align="right"> </iframe>
+        </div>
+  
+  
+</body>
+</html>
