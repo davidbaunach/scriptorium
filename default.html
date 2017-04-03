@@ -2,37 +2,51 @@
 <html>
 <head>
 
-  <title>UC Scriptorium</title>
+	<title>UC Scriptorium</title>
 
-  <script src="https://code.jquery.com/jquery-3.2.0.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> <!-- angularjs -->
 
-  <script type="text/javascript">
-            $(document).ready(function(){
-                 $("#contents_primary").click(function(){
-                     $("#body").load("contents_primary.html");
-                 });
-            });
-        </script>
+	<script src="https://code.jquery.com/jquery-3.2.0.js"></script> <!-- jquery -->
+	
+	<script async defer src="https://hypothes.is/embed.js"></script>
+
+<style>
+#left navigation {
+	float: left;
+	width: 50%;
+}
+#right navigation {
+	float: right;
+	width: 50%;
+	margin-right: 100%;
+}
+</style>
 
 </head>
+
 <body>
-  <h1>UC Scriptorium</h1>
-  
-  <div id="header">
-            <a href="#" id="contents_primary">Primary</a>
-            <!-- this stays the same -->
-        </div>
-        <div id="body">
 
-            <!-- All content will be loaded here dynamically -->
+	<h1>UC Scriptorium</h1> 
+	
+	<div id="header">
+        <!-- this stays the same -->
+	</div>
+  
+  	<table style="width:100%">
+		<tr>
+			<th><a href=".\contents_primary.htm" target="iframeleft">Primary Texts</a></th>
+			<th><a href=".\contents_primary.htm" target="iframeright">Primary Texts</a></th> 
+		</tr>
+	</table>
+   
+ 	<div id="body">
+	<!-- content should be loaded here -->
+	</div>
 
-        </div>
-         <div id="footer">
-            <!-- this stays the same -->
-            <iframe src=".\contents_primary.htm" frameborder="0" scrolling="yes" height="900" width="50%" align="left"> </iframe>  
-            <iframe src=".\contents_primary.htm" frameborder="0" scrolling="yes"  height="900" width="50%" align="right"> </iframe>
-        </div>
-  
-  
+	<div id="footer">
+	<!-- this stays the same, with no hope of a future... -->
+		<iframe src=".\contents_primary.htm" name="iframeleft" frameborder="0" scrolling="yes" height="900" width="50%" align="left"> </iframe>  
+		<iframe src=".\contents_primary.htm" name="iframeright" frameborder="0" scrolling="yes"  height="900" width="50%" align="right"> </iframe>
+	</div>  
 </body>
 </html>
